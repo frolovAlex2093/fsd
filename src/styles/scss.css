@@ -1,0 +1,12 @@
+.card {
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  border: 1 px solid #01021a;
+}
+.card h2 {
+  text-align: center;
+  color: #0324fc;
+}
+
+/*# sourceMappingURL=scss.css.map */

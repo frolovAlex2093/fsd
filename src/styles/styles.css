@@ -1,0 +1,19 @@
+@import "~normalize.css";
+@import "kaushan.css";
+
+body{
+    font-family: "Kaushan Script", sans-serif;
+    font-size: 20px;
+    color: #ffe600;
+    background-color: #ff0066;
+}
+
+.container{
+    padding-top: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+}
