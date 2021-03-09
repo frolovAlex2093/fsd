@@ -43,7 +43,7 @@ module.exports = {
     context: path.resolve(__dirname, "src"),
     mode: "development",
     entry: {
-        main:["@babel/polyfill", "./ui-kit.js"]
+        main:["@babel/polyfill", "./colors-and-types.js"]
     },
     output: {
         filename: filename("js"),
@@ -65,7 +65,7 @@ module.exports = {
     },
     plugins: [
         // new HTMLWebpackPlugin({
-        //     template: "./ui-kit.html",
+        //     template: "./colors-and-types.html",
         //         minify: {
         //         collapseWhitespace: isProd
         //         }
