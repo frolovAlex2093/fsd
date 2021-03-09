@@ -1,9 +1,5 @@
-import * as $ from 'jquery'
-import Post from "./Post";
-import "./styles/styles.css"
-import "./styles/scss.css"
-import "./babel"
+function importAll(resolve) {
+    resolve.keys().forEach(resolve);
+}
 
-const post =new Post("webpack post")
-
-console.log("post to string", post.toString())
+importAll(require.context('../src/', true, /\.js$|\.scss$/));

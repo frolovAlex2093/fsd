@@ -5,11 +5,16 @@ const CopyPlugin = require("copy-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
-
+const fs = require('fs');
 
 const isDev = process.env.NODE_ENV === "development"
 const isProd = !isDev
 console.log(isDev)
+
+
+
+const PAGES_DIR = path.resolve(__dirname, 'src/pages');
+const PAGES = fs.readdirSync(PAGES_DIR);
 
 const optimization = () => {
     const config = {
@@ -21,7 +26,6 @@ const optimization = () => {
         config.minimizer = [
             new CssMinimizerPlugin(),
             new TerserPlugin()
-
         ]
         return config
     }
@@ -39,17 +43,17 @@ module.exports = {
     context: path.resolve(__dirname, "src"),
     mode: "development",
     entry: {
-        main:["@babel/polyfill", "./index.js"],
-        analytics:"./analytics.js"
+        main:["@babel/polyfill", "./ui-kit.js"]
     },
     output: {
         filename: filename("js"),
         path: path.resolve(__dirname, "dist")
     },
     resolve: {
-        extensions: [".js",".png",".json"],
+        extensions: [".js",".png",".json", ".pug", ".html"],
         alias: {
-            "@": path.resolve(__dirname, "srs")
+            "@": path.resolve(__dirname, "src"),
+            blocks: path.resolve(__dirname, 'src/blocks'),
         }
     },
     optimization: optimization(),
@@ -60,13 +64,13 @@ module.exports = {
         port: 4200
     },
     plugins: [
-        new HTMLWebpackPlugin({
-            template: "./index.html",
-                minify: {
-                collapseWhitespace: isProd
-                }
-            }
-        ),
+        // new HTMLWebpackPlugin({
+        //     template: "./ui-kit.html",
+        //         minify: {
+        //         collapseWhitespace: isProd
+        //         }
+        //     }
+        // ),
         new CleanWebpackPlugin(),
         new CopyPlugin({
             patterns: [
@@ -78,11 +82,22 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: filename("css")
-        })
+        }),
+        ...PAGES.map((page) => new HTMLWebpackPlugin({
+            filename: `${page}.html`,
+            template: `${PAGES_DIR}/${page}/${page}.pug`,
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }))
 
     ],
     module: {
         rules: [
+            {
+                test: /\.pug$/,
+                loader: 'pug-loader',
+            },
             {
                 test: /\.css$/,
                 use: [MiniCssExtractPlugin.loader, "css-loader"]
