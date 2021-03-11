@@ -1,11 +1,19 @@
 .color-type{
   align-content: center;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 30px 30px;
+
 }
+.color-type__box{
+  width: 436px;
+  display: flex;
+}
+
 
 .color-type__colors{
   width: 145px;
   height: auto;
+  margin-left: 150px;
+  margin-right: 415px;
 }

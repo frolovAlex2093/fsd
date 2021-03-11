@@ -1,0 +1,15 @@
+mixin type({size, text})
+
+    .type__box
+        if(size == "H1")
+            .type__size-h1= size
+            .type__text-h1= text
+        if(size == "H2")
+            .type__size-h2= size
+            .type__text-h2= text
+        if(size == "H3")
+            .type__size-h3= size
+            .type__text-h3= text
+        if(size == "Body")
+            .type__size-body= size
+            .type__text-body= text
