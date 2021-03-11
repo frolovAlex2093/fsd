@@ -1,0 +1,21 @@
+extends ../main-ui-layout/main-ui-layout
+
+include ../../blocks/color/color
+include ../../blocks/logo/logo
+
+block content
+
+    .color-type
+        .color-type__logo
+            +logo
+        .color-type__colors
+            +color({color:"#1F2041", name: "Dark Shade", opas: "100" })
+            +color({color:"#1F2041", name: "Dark Shade", opas: "75" })
+            +color({color:"#1F2041", name: "Dark Shade", opas: "50" })
+            +color({color:"#1F2041", name: "Dark Shade", opas: "25" })
+            +color({color:"#1F2041", name: "Dark Shade", opas: "5" })
+            +color({color:"#1F2041", name: "Purple" })
+            +color({color:"#1F2041", name: "Green"})
+            .color-type__types
+
+

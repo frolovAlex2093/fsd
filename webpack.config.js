@@ -43,21 +43,21 @@ module.exports = {
     context: path.resolve(__dirname, "src"),
     mode: "development",
     entry: {
-        main:["@babel/polyfill", "./colors-and-types.js"]
+        main:["@babel/polyfill", "./index.js"]
     },
     output: {
         filename: filename("js"),
         path: path.resolve(__dirname, "dist")
     },
     resolve: {
-        extensions: [".js",".png",".json", ".pug", ".html"],
+        extensions: [".js",".png",".json"],
         alias: {
             "@": path.resolve(__dirname, "src"),
             blocks: path.resolve(__dirname, 'src/blocks'),
         }
     },
     optimization: optimization(),
-    devtool: isDev ? "source-map" : "",
+    devtool: isProd ? false : "source-map",
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
@@ -72,14 +72,14 @@ module.exports = {
         //     }
         // ),
         new CleanWebpackPlugin(),
-        new CopyPlugin({
-            patterns: [
-                {
-                    from: path.resolve(__dirname, "src/favicon.ico"),
-                    to: path.resolve(__dirname, "dist")
-                },
-            ],
-        }),
+        // new CopyPlugin({
+        //     patterns: [
+        //         {
+        //             from: path.resolve(__dirname, "src/favicon.ico"),
+        //             to: path.resolve(__dirname, "dist")
+        //         },
+        //     ],
+        // }),
         new MiniCssExtractPlugin({
             filename: filename("css")
         }),
@@ -125,6 +125,7 @@ module.exports = {
                     }
                 }
             }
+
         ]
     }
 }

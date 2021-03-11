@@ -1,4 +1,29 @@
-extends ../../pages/main-ui-lyout/main-ui-lyout
+mixin color({color, name, opas})
 
-block content
-    h2 rrrrrr
+
+    .color
+        .color__box
+            if (name == `Dark Shade`)
+                if (opas == "100")
+                    .color__color-100
+                if opas == "75"
+                    .color__color-75
+                if(opas == "50")
+                    .color__color-50
+                if(opas == "25")
+                    .color__color-25
+                if(opas == "5")
+                    .color__color-5
+                .color__text
+                    .color__text-name= `${name} ${opas}%`
+                    .color__text-code= color
+            if(name == "Purple")
+                .color__color-purple
+                .color__text
+                    .color__text-name= `${name}`
+                    .color__text-code= color
+            if(name == "Green")
+                .color__color-green
+                .color__text
+                    .color__text-name= `${name}`
+                    .color__text-code= color
