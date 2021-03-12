@@ -1,3 +1,5 @@
+@import "src/styles/colors";
+
 .type__box{
   display: flex;
   margin-right: 158px;
@@ -5,25 +7,21 @@
 }
 
 .type__size-h1{
-  //font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
+  font-family: "Montserrat Regular", sans-serif;
   font-size: 24px;
   line-height: 29px;
 
   margin-right: 30px;
   /* identical to box height */
 
-  color: rgba(31, 32, 65, 0.25);
+  color: $dark-shade-25;
   width: 37px;
 
   text-align: right;
 }
 
 .type__size-h2{
-  //font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
+  font-family: "Montserrat Regular", sans-serif;
   font-size: 19px;
   line-height: 23px;
   /* identical to box height */
@@ -36,13 +34,11 @@
 
   /* Dark 25% */
 
-  color: rgba(31, 32, 65, 0.25);
+  color:$dark-shade-25;
 }
 
 .type__size-h3{
-  //font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
+  font-family: "Montserrat Regular", sans-serif;
   font-size: 12px;
   line-height: 15px;
   /* identical to box height */
@@ -56,13 +52,11 @@
 
   /* Dark 25% */
 
-  color: rgba(31, 32, 65, 0.25);
+  color:$dark-shade-25;
 }
 
 .type__size-body{
-  //font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
+  font-family: "Montserrat Regular", sans-serif;
   font-size: 14px;
   line-height: 24px;
   /* identical to box height, or 171% */
@@ -75,30 +69,39 @@
 
   /* Dark 25% */
 
-  color: rgba(31, 32, 65, 0.25);
+  color:$dark-shade-25;
 
 }
 
 .type__text-h1 {
   width: 369px;
-  //font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
+  font-family: "Montserrat Bold", sans-serif;
   font-size: 24px;
   line-height: 29px;
+
+  color: $dark-shade-100;
 }
 .type__text-h2 {
-  //font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
+  font-family: "Montserrat Bold", sans-serif;
   font-size: 19px;
   line-height: 23px;
+  color: $dark-shade-100;
+
 }
 
 .type__text-h3 {
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  color: $dark-shade-100;
 
 }
 
 .type__text-body {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-shade-75;
+
 
 }

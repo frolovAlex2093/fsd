@@ -75,7 +75,7 @@ module.exports = {
         // new CopyPlugin({
         //     patterns: [
         //         {
-        //             from: path.resolve(__dirname, "src/favicon.ico"),
+        //             from: path.resolve(__dirname, "src/blocks/logo/img/logo.svg"),
         //             to: path.resolve(__dirname, "dist")
         //         },
         //     ],
@@ -108,11 +108,25 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,
-                use: ["file-loader"]
+                exclude: path.resolve(__dirname, 'src/fonts'),
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'assets/images',
+                    },
+                },
             },
             {
-                test: /\.(ttf|woff2|eot)$/,
-                use: ["file-loader"]
+                test: /\.(ttf|woff2|eot|svg|woff|otf)$/,
+                include: path.resolve(__dirname, 'src/fonts'),
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'assets/fonts',
+                    },
+                },
             },
             {
                 test: /\.m?js$/,

@@ -1,5 +1,11 @@
 @import "../../styles/colors";
 
+@mixin size{
+  margin-right: 40px;
+  min-width: 70px;
+  min-height: 70px;
+  border-radius: 6px;
+}
 
 .color__box{
   display: flex;
@@ -8,65 +14,52 @@
 }
 
 .color__color-100{
-  margin-right: 40px;
-  min-width: 70px;
-  min-height: 70px;
+  @include size;
   background-color: $dark-shade-100;
-  border-radius: 6px;
+
 }
 
 .color__color-75{
-  margin-right: 40px;
-  min-width: 70px;
-  min-height: 70px;
+  @include size;
   background-color: $dark-shade-75;
-  border-radius: 6px;
 }
 
 .color__color-50{
-  margin-right: 40px;
-  min-width: 70px;
-  min-height: 70px;
+  @include size;
   background-color: $dark-shade-50;
-  border-radius: 6px;
 }
 
 .color__color-25{
-  margin-right: 40px;
-  min-width: 70px;
-  min-height: 70px;
+  @include size;
   background-color: $dark-shade-25;
-  border-radius: 6px;
 }
 
 .color__color-5{
-  margin-right: 40px;
-  min-width: 70px;
-  min-height: 70px;
+  @include size;
   background-color: $dark-shade-5;
-  border-radius: 6px;
 }
 
 .color__color-purple{
-  margin-right: 40px;
-  min-width: 70px;
-  min-height: 70px;
+  @include size;
   background-color: $purple;
-  border-radius: 6px;
 }
 
 .color__color-green{
-  margin-right: 40px;
-  min-width: 70px;
-  min-height: 70px;
+  @include size;
   background-color: $green;
-  border-radius: 6px;
 }
 
 .color__text-name{
-  //font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
+  font-family: "Montserrat Bold", sans-serif;
   font-size: 19px;
   line-height: 28px;
+  color: $dark-shade-100;
+}
+
+.color__text-code{
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 19px;
+  line-height: 28px;
+  color: $dark-shade-100;
+
 }
