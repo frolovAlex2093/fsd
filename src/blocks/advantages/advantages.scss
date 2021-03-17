@@ -1,0 +1,51 @@
+@import "../../styles/colors";
+
+.advantage{
+  max-width: 291px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+  &__icon{
+    width: 48px;
+    height: 48px;
+    padding-top: 5px;
+    margin-right: 10px;
+
+    font-family: "Material Icons", sans-serif;
+    font-size: 48px;
+    line-height: 41px;
+    background: $gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__text{
+    display: flex;
+    flex-direction: column;
+  }
+  &__text-zag{
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark-shade-75
+  }
+
+  &__text-op{
+    font-family: "Montserrat Regular", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark-shade-75
+
+  }
+
+  &__br{
+    display: block;
+    margin-top: 17px;
+    height: 1px;
+    width: 280px;
+    background: $dark-shade-10;
+
+  }
+
+}

@@ -1,0 +1,21 @@
+@import "../../styles/colors";
+
+.btn-text{
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $purple;
+
+  &:hover{
+    color: $dark-shade-50;
+  }
+  &:focus{
+    color: $dark-shade-50;
+  }
+}

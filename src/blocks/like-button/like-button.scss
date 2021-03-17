@@ -1,0 +1,57 @@
+@import "../../styles/colors";
+
+@mixin like{
+  font-family: "Material Icons", sans-serif;
+  font-size: 10px;
+  line-height: 9px;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+}
+
+.like-check{
+  border-radius: 10px;
+  border: 1px $dark-shade-25 solid;
+  width: 40px;
+  height: 20px;
+  display: flex;
+  vertical-align: center;
+
+  &__hurt{
+    @include like();
+    color: $dark-shade-25;
+  }
+
+  &__count{
+    font-family: "Montserrat Regular", sans-serif;
+    font-size: 10px;
+    line-height: 12px;
+    color: $dark-shade-25;
+    padding-top: 3px;
+
+  }
+}
+
+.like-uncheck{
+  border-radius: 10px;
+  border: 1px $purple solid;
+  width: 40px;
+  height: 20px;
+  display: flex;
+
+  &__hurt{
+    @include like();
+    background: $gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__count{
+    font-family: "Montserrat Regular", sans-serif;
+    font-size: 10px;
+    line-height: 12px;
+    color: $purple;
+    padding-top: 3px;
+
+  }
+}

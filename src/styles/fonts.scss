@@ -34,3 +34,15 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Material Icons';
+  src: url("../fonts/material-icons/material-icons-regular.eot");
+  src: url("../fonts/material-icons/material-icons-regular.woff2") format('woff2'),
+  url("../fonts/material-icons/material-icons-regular.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/material-icons/material-icons-regular.svg") format("svg"),
+  url("../fonts/material-icons/material-icons-regular.woff") format('woff'),
+  url("../fonts/material-icons/material-icons-regular.ttf") format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}

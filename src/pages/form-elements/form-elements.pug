@@ -1,6 +1,15 @@
 extends ../main-ui-layout/main-ui-layout
 
 include ../../blocks/logo/logo
+include ../../blocks/text-field/text-field
+include ../../blocks/btn-long/btn-long
+include ../../blocks/rate-button/rate-button
+include ../../blocks/like-button/like-button
+include ../../blocks/advantages/advantages
+include ../../blocks/bullet-list/bullet-list
+include ../../blocks/btn-colorful/btn-colorful
+include ../../blocks/btn-transparent/btn-transparent
+include ../../blocks/btn-text/btn-text
 
 block content
 
@@ -9,6 +18,19 @@ block content
 
     .form-elements
         .form-elements__box
+            +text-field
         .form-elements__box
+            +btn-colorful({text: "click me"})
+            +btn-transparent({text: "click me"})
+            +btn-text({text: "click me"})
+            +btn-long({text: "click me"})
         .form-elements__box
-
+            +rate-button({check:[true, true, true, false, false]})
+        .form-elements__box
+            +like-button({check: true, count: "2"})
+            +like-button({check: false, count: "12"})
+            +advantages({icon: "insert_emoticon", title: "Комфорт", text: "Шумопоглощающие стены"})
+            +advantages({icon: "location_city", title: "Удобство", text: "Окно в каждой из спален"})
+            +bullet-list({text: "Нельзя с питомцами"})
+            +bullet-list({text: "Без вечеринок и мероприятий"})
+            +bullet-list({text: "Время прибытия — после 13:00, а выезд до 12:00"})

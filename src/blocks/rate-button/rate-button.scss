@@ -1,0 +1,30 @@
+@import "../../styles/colors";
+
+@mixin star{
+  font-family: "Material Icons", sans-serif;
+  font-size: 24px;
+  line-height: 20px;
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 24px;
+  height: 24px;
+}
+
+.rate-button{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  max-width: 120px;
+  max-height: 24px;
+
+
+  &-check{
+    @include star;
+  }
+  &-uncheck{
+    @include star;
+
+  }
+}
+

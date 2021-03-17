@@ -1,0 +1,42 @@
+@import "../../styles/colors";
+
+.btn-transparent{
+  display: inline-block;
+  position: relative;
+  //top: 2px;
+  font-family: "Montserrat Bold", sans-serif;
+  color: $purple;
+  border-radius: 22px;
+  border: none;
+  padding: 0 18px;
+  margin: 2px;
+  text-transform: uppercase;
+  height: 41px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  background-color: $white;
+
+  &::after {
+    display: inherit;
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    z-index: -1;
+    border-radius: 22px;
+    background-image: $gradient;
+
+
+  }
+  &:hover:before{
+    background: $gradient-25;
+  }
+  &:focus:before{
+    background: $gradient-25;
+  }
+}

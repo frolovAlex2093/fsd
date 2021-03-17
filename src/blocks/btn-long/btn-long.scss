@@ -1,0 +1,29 @@
+@import "../../styles/colors";
+
+.btn-long {
+  position: relative;
+  display: inline-block;
+  font-family: "Montserrat Bold", sans-serif;
+  color: $white;
+  background-image: $gradient;
+  font-size: 12px;
+  line-height: 15px;
+  border: none;
+  height: 44px;
+  border-radius: 22px;
+  padding: 0 18px;
+  text-transform: uppercase;
+  width: 320px;
+  text-align: center;
+
+  &__icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'Material Icons';
+    display: inline-block;
+    text-transform: none;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}

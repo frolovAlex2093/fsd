@@ -2,7 +2,7 @@
 
 .type__box{
   display: flex;
-  margin-right: 158px;
+  //margin-right: 158px;
   margin-bottom: 51px;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .type__text-h1 {
-  width: 369px;
+  max-width: 369px;
   font-family: "Montserrat Bold", sans-serif;
   font-size: 24px;
   line-height: 29px;

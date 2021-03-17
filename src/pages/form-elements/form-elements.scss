@@ -1,13 +1,11 @@
 .form-elements{
-
+  margin: 140px 0;
 
   &__box{
-    width: 10px;
-    height: 10px;
-    background-color: green;
 
   }
+
+  &__logo{
+    margin: 30px;
+  }
 }
-.form-elements__logo{
-   margin: 30px;
- }

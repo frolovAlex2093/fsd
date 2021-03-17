@@ -1,0 +1,10 @@
+mixin like-button({check, count})
+
+    if(check)
+        .like-check
+            .like-check__hurt= "favorite_border"
+            .like-check__count= count
+    else
+        .like-uncheck
+            .like-uncheck__hurt= "favorite"
+            .like-uncheck__count= count

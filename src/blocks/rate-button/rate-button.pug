@@ -1,0 +1,10 @@
+mixin rate-button({check})
+
+    .rate-button
+        - for (var i = 0; i < 5; ++i) {
+
+            if(check[i])
+                .rate-button-check= "star"
+            else
+                .rate-button-uncheck= "star_border"
+        - }

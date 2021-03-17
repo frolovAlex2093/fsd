@@ -1,0 +1,32 @@
+@import "../../styles/colors";
+
+.btn-colorful{
+  background: $gradient;
+  text-align: center;
+  cursor: pointer;
+
+  border-radius: 22px;
+  border: none;
+  //width: 99px;
+  //height: 44px;
+  padding: 15px 20px;
+
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #ffffff;
+  outline: none;
+
+
+  &:focus{
+
+    background: $gradient-25;
+
+  }
+
+  &:hover{
+    background: $gradient-25;
+
+  }
+}
