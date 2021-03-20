@@ -1,0 +1,40 @@
+@import "../color/color";
+
+.prof__card{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12px;
+}
+
+.prof__photo{
+  background-image: url("img/boy-avatar.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 47.67px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 10px;
+
+  box-shadow: 0 10px 20px 0 rgba(31, 32, 65, 0.1);
+
+
+}
+
+.prof__text{
+  flex-direction: column;
+}
+
+.prof__name{
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-shade-75;
+}
+
+.prof__date{
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-shade-75;
+
+}

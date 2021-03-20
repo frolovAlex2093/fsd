@@ -1,0 +1,16 @@
+@import "../../styles/colors";
+
+
+.header{
+  max-width: 1440px;
+  //background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transform: z-index -2;
+}
+.header__box{
+  max-width: 1160px;
+  margin: 0 auto;
+}
+

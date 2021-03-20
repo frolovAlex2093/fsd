@@ -10,6 +10,8 @@ include ../../blocks/bullet-list/bullet-list
 include ../../blocks/btn-colorful/btn-colorful
 include ../../blocks/btn-transparent/btn-transparent
 include ../../blocks/btn-text/btn-text
+include ../../blocks/comment/comment
+include ../../blocks/radio-btn/radio-btn
 
 block content
 
@@ -21,9 +23,10 @@ block content
             +text-field
         .form-elements__box
             +btn-colorful({text: "click me"})
-            +btn-transparent({text: "click me"})
+            +btn-transparent({text: "войти"})
             +btn-text({text: "click me"})
-            +btn-long({text: "click me"})
+            +btn-long({text: "перейти к оплате"})
+            +radio-btn()
         .form-elements__box
             +rate-button({check:[true, true, true, false, false]})
         .form-elements__box
@@ -34,3 +37,6 @@ block content
             +bullet-list({text: "Нельзя с питомцами"})
             +bullet-list({text: "Без вечеринок и мероприятий"})
             +bullet-list({text: "Время прибытия — после 13:00, а выезд до 12:00"})
+
+            +comment({text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, " +
+                    "действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей. "})

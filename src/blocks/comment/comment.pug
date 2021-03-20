@@ -1,0 +1,12 @@
+include ../like-button/like-button
+include ../prof/prof
+
+mixin comment({text})
+
+    .comment
+        .comment__prof
+            +prof({name: "Мурад Сарафанов", date: "5 дней назад"})
+        .comment__comment
+            .comment__comment-reiting
+                +like-button({check: false, count: 12})
+            .comment__coment-text= text

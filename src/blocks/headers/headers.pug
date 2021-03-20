@@ -1,0 +1,16 @@
+include ../main-logo/main-logo
+include ../btn-colorful/btn-colorful
+include ../btn-transparent/btn-transparent
+
+mixin headers()
+
+    .header
+        .header__box
+            +main-logo
+            .header__nav
+                .header__links
+                .header__buttons
+                    .header__button-signIn
+                        +btn-transparent({text: "войти"})
+                    .header__button-signUp
+                        +btn-colorful({text: "зарегестрироваться"})
