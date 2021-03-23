@@ -1,8 +1,8 @@
 @import "../../styles/colors";
 
 .heares-footers{
-  //background: #E5E5E5;
-  transform: z-index -5;
+  background: #E5E5E5;
+  height: 1350px;
 
 }
 
@@ -11,6 +11,11 @@
   margin-bottom: 62px;
   padding-top: 30px;
 }
-.main-logo__box{
-  margin-bottom: 50px;
+
+.header{
+
+  display: block;
+  height: 70px;
+  margin: 0 auto 40px auto;
+  //margin-bottom: 40px;
 }

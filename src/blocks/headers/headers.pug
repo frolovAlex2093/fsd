@@ -2,15 +2,26 @@ include ../main-logo/main-logo
 include ../btn-colorful/btn-colorful
 include ../btn-transparent/btn-transparent
 
-mixin headers()
+mixin headers({links, type, name})
 
     .header
         .header__box
-            +main-logo
+            .header__logo
+                +main-logo
             .header__nav
                 .header__links
-                .header__buttons
-                    .header__button-signIn
-                        +btn-transparent({text: "войти"})
-                    .header__button-signUp
-                        +btn-colorful({text: "зарегестрироваться"})
+                    each link in links
+                        if(link === "Услуги" || link === "Соглашения")
+                            .drop__link
+                                a.links__link(href="#")= link
+                                p.links__link--str= "expand_more"
+                        else
+                            a.links__link(href="#")= link
+                if (type)
+                    .header__name= name
+                else
+                    .header__buttons
+                        .header__button-signIn
+                            +btn-transparent({text: "войти"})
+                        .header__button-signUp
+                            +btn-colorful({text: "зарегестрироваться"})
