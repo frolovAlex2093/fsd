@@ -1,6 +1,6 @@
 mixin color({color, name, opas})
 
-    .color__box
+    .color
         if (name == `Dark Shade`)
             if (opas == "100")
                 .color__color-100
@@ -13,15 +13,15 @@ mixin color({color, name, opas})
             if(opas == "5")
                 .color__color-5
             .color__text
-                .color__text-name= `${name} ${opas}%`
-                .color__text-code= color
+                .color__name= `${name} ${opas}%`
+                .color__code= color
         if(name == "Purple")
             .color__color-purple
             .color__text
-                .color__text-name= `${name}`
-                .color__text-code= color
+                .color__name= `${name}`
+                .color__code= color
         if(name == "Green")
             .color__color-green
             .color__text
-                .color__text-name= `${name}`
-                .color__text-code= color
+                .color__name= `${name}`
+                .color__code= color

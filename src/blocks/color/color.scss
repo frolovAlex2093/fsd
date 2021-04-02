@@ -7,60 +7,57 @@
   border-radius: 6px;
 }
 
-.color__box{
+.color{
   display: flex;
   margin-bottom: 20px;
   max-width: 281px;
 
-}
+  &__color-100{
+    @include size;
+    background-color: $dark-shade-100;
+  }
 
-.color__color-100{
-  @include size;
-  background-color: $dark-shade-100;
+  &__color-75{
+    @include size;
+    background-color: $dark-shade-75;
+  }
 
-}
+  &__color-50{
+    @include size;
+    background-color: $dark-shade-50;
+  }
 
-.color__color-75{
-  @include size;
-  background-color: $dark-shade-75;
-}
+  &__color-25{
+    @include size;
+    background-color: $dark-shade-25;
+  }
 
-.color__color-50{
-  @include size;
-  background-color: $dark-shade-50;
-}
+  &__color-5{
+    @include size;
+    background-color: $dark-shade-5;
+  }
 
-.color__color-25{
-  @include size;
-  background-color: $dark-shade-25;
-}
+  &__color-purple{
+    @include size;
+    background-color: $purple;
+  }
 
-.color__color-5{
-  @include size;
-  background-color: $dark-shade-5;
-}
+  &__color-green{
+    @include size;
+    background-color: $green;
+  }
 
-.color__color-purple{
-  @include size;
-  background-color: $purple;
-}
+  &__name{
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 19px;
+    line-height: 28px;
+    color: $dark-shade-100;
+  }
 
-.color__color-green{
-  @include size;
-  background-color: $green;
-}
-
-.color__text-name{
-  font-family: "Montserrat Bold", sans-serif;
-  font-size: 19px;
-  line-height: 28px;
-  color: $dark-shade-100;
-}
-
-.color__text-code{
-  font-family: "Montserrat Regular", sans-serif;
-  font-size: 19px;
-  line-height: 28px;
-  color: $dark-shade-100;
-
+  &__code{
+    font-family: "Montserrat Regular", sans-serif;
+    font-size: 19px;
+    line-height: 28px;
+    color: $dark-shade-100;
+  }
 }

@@ -1,26 +1,30 @@
 @import "../color/color";
 
-
 .comment{
   display: flex;
   //flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
+
+    &__content{
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__reiting{
+      margin-right: 14.31px;
+    }
+
+    &__text{
+      font-family: "Montserrat Regular", sans-serif;
+      font-size: 14px;
+      line-height: 24px;
+      color: $dark-shade-75;
+      max-width: 653px;
+    }
 }
 
-.comment__comment{
-  display: flex;
-  flex-direction: row;
-}
 
-.comment__comment-reiting{
-  margin-right: 14.31px;
-}
 
-.comment__coment-text{
-  font-family: "Montserrat Regular", sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  color: $dark-shade-75;
-  max-width: 653px;
-}
+
+

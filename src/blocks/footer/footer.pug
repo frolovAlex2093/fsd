@@ -1,0 +1,47 @@
+include ../main-logo/main-logo
+include ../socials/socials
+
+mixin footer({type})
+
+    -var navs = ["О нас", "Новости", "Служба поддержки", "Услуги"]
+    -var abouts = ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
+    -var supports = ["Соглашения", "Сообщества", "Связь с нами"]
+
+    if(type)
+        .footer
+            .footer-container
+                .footer__logo
+                    .footer__logo-logo
+                        +main-logo
+                    .footer__text= "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
+
+                .footer__nav= "навигация"
+                    each nav in navs
+                        a.footer__link(href="#")= nav
+
+
+                .footer__nav= "О нас"
+                    each about in abouts
+                        a.footer__link(href="#")= about
+
+                .footer__nav= "Служба поддержки"
+                    each support in supports
+                        a.footer__link(href="#")= support
+
+                .footer__nav= "Подписка"
+                    .footer__text= "Получайте специальные предложения и новости сервиса"
+            .footer__br
+
+            .footer__copyright
+                .footer__copyright--text= "Copyright © 2018 Toxin отель. Все права защищены."
+                .footer__copyright--links
+                    +socials
+    else
+        .footer-small
+            .footer-small__container
+                .footer-small__logo
+                    +main-logo
+                .footer__copyright--text-small= "Copyright © 2018 Toxin отель. Все права защищены."
+                .footer-small__social
+                    +socials
+

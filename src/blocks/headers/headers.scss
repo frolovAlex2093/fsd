@@ -4,46 +4,58 @@
 .header{
   background: white;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-}
 
-.header__box{
-  max-width: 1160px;
-  margin: 0 auto;
-  display: flex;
-  height: 100%;
-  justify-content: space-between;
-}
+  &__box{
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+  }
 
-.header__logo{
- margin-top: 15px;
-}
+  &__logo{
+    margin-top: 15px;
+  }
 
-.header__nav{
-  display: flex;
-  justify-content: space-between;
-  width: 750px;
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    width: 750px;
+  }
 
+  &__links{
+    max-width: 447px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 26px 20px 26px auto;
 
-}
-.header__links{
-  max-width: 447px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin: 26px 20px 26px auto;
+    font-family: "Montserrat Regular", sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color:$dark-shade-50;
+  }
 
-  font-family: "Montserrat Regular", sans-serif;
-  font-size: 14px;
-  line-height: 17px;
-  color:$dark-shade-50;
-}
+  &__buttons{
+    width: 303px;
+    height: 34px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+  }
 
-.header__buttons{
-  width: 303px;
-  height: 34px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 18px;
+  &__name{
+    font-family: "Montserrat Regular", sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark-shade-50;
+    border-left: 1px $dark-shade-10 solid;
+    width: auto;
+    height: 18px;
+    margin: 26px 0;
+    padding-left: 20px;
+  }
+
 }
 
 .links__link{
@@ -55,28 +67,22 @@
   display: flex;
 
 
+  &--str{
+    font-family: "Material Icons", sans-serif;
+    font-size: 24px;
+    line-height: 20px;
+    margin: 0 0 0 0;
+    height: 21px;
+  }
+
+  &:hover{
+    font-family: "Montserrat Bold", sans-serif;
+    -webkit-transition: color .3s linear;
+    transition: color .3s linear;
+    color: $dark-shade-100;
+  }
 }
 
-.header__name{
-  font-family: "Montserrat Regular", sans-serif;
-  font-size: 14px;
-  line-height: 17px;
-  color: $dark-shade-50;
-  border-left: 1px $dark-shade-10 solid;
-  width: auto;
-  height: 18px;
-  margin: 26px 0;
-  padding-left: 20px;
-
-}
-.links__link--str{
-  font-family: "Material Icons", sans-serif;
-  font-size: 24px;
-  line-height: 20px;
-  margin: 0 0 0  0;
-  height: 21px;
-
-}
 .drop__link{
   display: flex;
   text-align: center;

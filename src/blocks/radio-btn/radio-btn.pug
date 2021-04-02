@@ -1,9 +1,7 @@
-mixin radio-btn()
+mixin radio-btn({items})
 
-    form
-        p
-            input(name='gender' type='radio' value='man')
-            label(for='radio') мужчина
-        p
-            input(name='gender' type='radio' value='woman')
-            |  женщина
+    .radio
+        each item in items
+            label.radio__label
+                input.radio__input(type="radio" name=item.name checked=item.checked)
+                .radio__text= item.label

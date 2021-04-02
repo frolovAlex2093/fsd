@@ -26,7 +26,9 @@ block content
             +btn-transparent({text: "войти"})
             +btn-text({text: "click me"})
             +btn-long({text: "перейти к оплате"})
-            +radio-btn()
+            +radio-btn({items: [
+                        {label: "Мужчина", name: "gender", checked: true},
+                        {label: "Женщина", name: "gender", checked: false}]})
         .form-elements__box
             +rate-button({check:[true, true, true, false, false]})
         .form-elements__box

@@ -1,0 +1,33 @@
+@import '../../styles/colors.scss';
+
+.socials {
+  display: flex;
+
+  &__link {
+    font-family: 'Font Awesome';
+    width: 28px;
+    height: 24px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 0 8px;
+    background: $gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &_with-twitter::before {
+      content: '\f099';
+    }
+
+    &_with-fb::before {
+      content: '\f082';
+    }
+
+    &_with-instagram::before {
+      content: '\f16d';
+    }
+  }
+}

@@ -20,18 +20,18 @@
     -webkit-text-fill-color: transparent;
   }
 
-  &__text{
+  &__content{
     display: flex;
     flex-direction: column;
   }
-  &__text-zag{
+  &__title{
     font-family: "Montserrat Bold", sans-serif;
     font-size: 14px;
     line-height: 24px;
     color: $dark-shade-75
   }
 
-  &__text-op{
+  &__text{
     font-family: "Montserrat Regular", sans-serif;
     font-size: 14px;
     line-height: 24px;

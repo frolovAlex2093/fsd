@@ -2,6 +2,7 @@ extends ../main-ui-layout/main-ui-layout
 
 include ../../blocks/logo/logo
 include ../../blocks/headers/headers
+include ../../blocks/footer/footer
 
 block header
     .heares-footers
@@ -11,4 +12,8 @@ block header
              +headers({links: ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"], type: false})
         .header
             +headers({links: ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"], type: true, name: "Юлий Цезарь"})
+        .footer
+            +footer({type: true})
+        .footer--small
+            +footer({type: false})
 
