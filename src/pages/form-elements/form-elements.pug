@@ -12,6 +12,7 @@ include ../../blocks/btn-transparent/btn-transparent
 include ../../blocks/btn-text/btn-text
 include ../../blocks/comment/comment
 include ../../blocks/radio-btn/radio-btn
+include ../../blocks/toggle-btn/toggle-btn
 
 block content
 
@@ -27,8 +28,10 @@ block content
             +btn-text({text: "click me"})
             +btn-long({text: "перейти к оплате"})
             +radio-btn({items: [
-                        {label: "Мужчина", name: "gender", checked: true},
-                        {label: "Женщина", name: "gender", checked: false}]})
+                    {label: "Мужчина", name: "gender", checked: true},
+                    {label: "Женщина", name: "gender", checked: false}]})
+            +toggle-btn({items:[
+                    {label: "Получать спецпредложения", name: "tog1", checked: false}]})
         .form-elements__box
             +rate-button({check:[true, true, true, false, false]})
         .form-elements__box

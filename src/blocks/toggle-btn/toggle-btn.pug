@@ -1,0 +1,7 @@
+mixin toggle-btn({items})
+
+    .toggle
+        each item in items
+            label.toggle__label
+                input.toggle__input(type="checkbox" name=item.name checked=item.checked)
+                .toggle__text= item.label
