@@ -1,0 +1,11 @@
+mixin checkbox({items})
+
+    .checkbox
+    each item in items
+        label.checkbox__label
+            input.checkbox__input(type="checkbox" checked=item.checked)
+            if(item.description)
+                .checkbox__text.checkbox__text-bold= item.label
+                    .checkbox__description= item.description
+            else
+                .checkbox__text= item.label

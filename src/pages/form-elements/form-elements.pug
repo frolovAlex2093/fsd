@@ -13,6 +13,7 @@ include ../../blocks/btn-text/btn-text
 include ../../blocks/comment/comment
 include ../../blocks/radio-btn/radio-btn
 include ../../blocks/toggle-btn/toggle-btn
+include ../../blocks/checkbox/checkbox
 
 block content
 
@@ -27,6 +28,15 @@ block content
             +btn-transparent({text: "войти"})
             +btn-text({text: "click me"})
             +btn-long({text: "перейти к оплате"})
+            +checkbox({items: [
+                    {label: "Можно курить", checked: false},
+                    {label: "Можно с питомцами", checked: true},
+                    {label: "Можно пригласить гостей (до 10 человек)", checked: true},
+                ]})
+            +checkbox({items: [
+                {label: "Широкий коридор", description: "Ширина коридоров в номере не менее 91 см.", checked: false},
+                {label: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера.", checked: false}
+                ]})
             +radio-btn({items: [
                     {label: "Мужчина", name: "gender", checked: true},
                     {label: "Женщина", name: "gender", checked: false}]})
