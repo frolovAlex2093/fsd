@@ -6,6 +6,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 const fs = require('fs');
+const webpack = require('webpack');
+
 
 const isDev = process.env.NODE_ENV === "development"
 const isProd = !isDev
@@ -64,24 +66,14 @@ module.exports = {
         port: 4200
     },
     plugins: [
-        // new HTMLWebpackPlugin({
-        //     template: "./colors-and-types.html",
-        //         minify: {
-        //         collapseWhitespace: isProd
-        //         }
-        //     }
-        // ),
         new CleanWebpackPlugin(),
-        // new CopyPlugin({
-        //     patterns: [
-        //         {
-        //             from: path.resolve(__dirname, "src/blocks/logo/img/logo.svg"),
-        //             to: path.resolve(__dirname, "dist")
-        //         },
-        //     ],
-        // }),
         new MiniCssExtractPlugin({
             filename: filename("css")
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
         }),
         ...PAGES.map((page) => new HTMLWebpackPlugin({
             filename: `${page}.html`,
@@ -90,7 +82,6 @@ module.exports = {
                 collapseWhitespace: isProd
             }
         }))
-
     ],
     module: {
         rules: [

@@ -1,0 +1,45 @@
+@import "../../styles/colors.scss";
+
+.expander {
+  &__header {
+    font-family: Montserrat, OpenSans, sans-serif;
+    cursor: pointer;
+    user-select: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: $dark-shade-100;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: relative;
+      top: -2px;
+      left: -16px;
+      margin-left: 48px;
+      width: 8px;
+      height: 8px;
+      border-color: $dark-shade-50;
+      border-style: solid;
+      border-width: 0 0 2px 2px;
+      transform: rotate(-45deg);
+    }
+
+    &_open::after {
+      transform: rotate(135deg);
+      top: 3px;
+    }
+  }
+
+  &__checkbox {
+    margin-top: 12px;
+  }
+
+  &__list {
+    display: block;
+
+    &_hided {
+      display: none;
+    }
+  }
+}

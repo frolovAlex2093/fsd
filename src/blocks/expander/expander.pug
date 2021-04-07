@@ -1,0 +1,9 @@
+include ../checkbox/checkbox
+
+mixin expander({title, hide, list})
+  .expander
+    .expander__header.js-expander= title
+    .expander__list(class=hide ? "expander__list_hided": "")
+      each item in list
+        .expander__checkbox
+          +checkbox({items: [{ label: item.text, checked: item.checked}]} )

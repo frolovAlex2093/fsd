@@ -14,6 +14,7 @@ include ../../blocks/comment/comment
 include ../../blocks/radio-btn/radio-btn
 include ../../blocks/toggle-btn/toggle-btn
 include ../../blocks/checkbox/checkbox
+include ../../blocks/expander/expander
 
 block content
 
@@ -55,3 +56,29 @@ block content
 
             +comment({text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, " +
                     "действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей. "})
+
+            +expander({
+                title: "Expandable checkbox list",
+                list: [
+                    {text: "Завтрак", checked: false},
+                    {text: "Письменный стол", checked: true},
+                    {text: "Стул для кормления", checked: true},
+                    {text: "Кроватка", checked: true},
+                    {text: "Телевизор", checked: false},
+                    {text: "Шампунь", checked: false},
+                    {text: "Телевизор", checked: false},
+                    {text: "Шампунь", checked: false},
+                ]})
+            +expander({
+                title: "Expandable checkbox list",
+                list: [
+                    {text: "Завтрак", checked: false},
+                    {text: "Письменный стол", checked: true},
+                    {text: "Стул для кормления", checked: true},
+                    {text: "Кроватка", checked: true},
+                    {text: "Телевизор", checked: false},
+                    {text: "Шампунь", checked: false},
+                    {text: "Телевизор", checked: false},
+                    {text: "Шампунь", checked: false}],
+                hide: true
+            })
