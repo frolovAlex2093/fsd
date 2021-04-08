@@ -15,6 +15,7 @@ include ../../blocks/radio-btn/radio-btn
 include ../../blocks/toggle-btn/toggle-btn
 include ../../blocks/checkbox/checkbox
 include ../../blocks/expander/expander
+include ../../blocks/pagination/pagination
 
 block content
 
@@ -44,7 +45,7 @@ block content
             +toggle-btn({items:[
                     {label: "Получать спецпредложения", name: "tog1", checked: false}]})
         .form-elements__box
-            +rate-button({check:[true, true, true, false, false]})
+            +rate-button({check: [true, true, true, false, false]})
         .form-elements__box
             +like-button({check: true, count: "2"})
             +like-button({check: false, count: "12"})
@@ -53,6 +54,15 @@ block content
             +bullet-list({text: "Нельзя с питомцами"})
             +bullet-list({text: "Без вечеринок и мероприятий"})
             +bullet-list({text: "Время прибытия — после 13:00, а выезд до 12:00"})
+
+            +pagination({pages: [
+                    {number: "1", checked: true},
+                    {number: "2", checked: false},
+                    {number: "3", checked: false},
+                    {number: "...", checked: false},
+                    {number: "15", checked: false},
+                    {number: "arrow_forward", checked: false},
+                ]})
 
             +comment({text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, " +
                     "действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей. "})
@@ -82,3 +92,4 @@ block content
                     {text: "Шампунь", checked: false}],
                 hide: true
             })
+

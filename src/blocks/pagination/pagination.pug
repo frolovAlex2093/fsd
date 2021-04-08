@@ -1,0 +1,13 @@
+mixin pagination({pages})
+
+
+    .pagination
+        each page in pages
+            if (page.checked)
+                .pagination__number.pagination__number-checked= page.number
+            else if (page.number === "arrow_forward")
+                .pagination__number.pagination__number-next= page.number
+
+            else
+                .pagination__number= page.number
+        .pagination__text= "1 – 12 из 100+ вариантов аренды"
