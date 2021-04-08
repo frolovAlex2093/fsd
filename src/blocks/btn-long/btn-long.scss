@@ -5,7 +5,7 @@
   display: inline-block;
   font-family: "Montserrat Bold", sans-serif;
   color: $white;
-  background-image: $gradient;
+  background: $gradient;
   font-size: 12px;
   line-height: 15px;
   border: none;
@@ -15,15 +15,25 @@
   text-transform: uppercase;
   width: 320px;
   text-align: center;
+  outline: none;
+  cursor: pointer;
 
   &__icon {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     display: inline-block;
     text-transform: none;
     font-size: 24px;
     line-height: 24px;
+  }
+
+  &:hover{
+    background: $gradient-25;
+  }
+
+  &:focus{
+    background: $gradient-25;
   }
 }

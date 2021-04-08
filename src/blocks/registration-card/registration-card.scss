@@ -1,0 +1,83 @@
+@import "../../styles/colors";
+
+
+.registration-card{
+  max-width: 380px;
+  height: 646px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__container{
+    width: 320px;
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    color: black;
+    text-transform: uppercase;
+  }
+
+  &__title{
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 24px;
+    line-height: 29px;
+    color: black;
+    margin-bottom: 20px;
+    text-transform: none;
+  }
+
+  &__text-field{
+    margin-bottom: 10px;
+  }
+
+  &__radio{
+    margin-bottom: 20px;
+  }
+
+  &__birthday{
+
+    margin-bottom: 5px;
+  }
+
+  &__reg-data{
+    margin: 10px 0 5px 0;
+  }
+
+  &__toggle{
+    margin-bottom: 24px;
+  }
+
+  &__long-btn{
+    margin-bottom: 30px;
+  }
+
+  &__login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &-text{
+      font-family: "Montserrat Regular", sans-serif;
+      font-size: 14px;
+      line-height: 18px;
+      color: black;
+      text-transform: none;
+    }
+
+    &-btn{
+      width: 99px;
+      height: 44px;
+      margin-right: 3px;
+      position: absolute;
+      z-index: 9999;
+      right: 0;
+    }
+  }
+
+
+}

@@ -1,9 +1,14 @@
 extends ../main-ui-layout/main-ui-layout
 
 include ../../blocks/login-card/login-card
+include ../../blocks/registration-card/registration-card
 
 
 
 block content
 
-    +login-card
+    .cards
+        .cards-login
+            +login-card
+        .cards-registration
+            +registration-card

@@ -1,6 +1,6 @@
 mixin text-field({placeholder, type})
 
-
-
-        form.form
-            input(class="forms" placeholder=placeholder type=type)
+    - let classes = ['forms']
+    if(placeholder === "ДД.ММ.ГГГГ")
+        - classes.push('js-masked')
+    input(class=classes placeholder=placeholder type=type)

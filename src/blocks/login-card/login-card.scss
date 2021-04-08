@@ -3,12 +3,15 @@
 .login-card{
   width: 380px;
   height: 358px;
-  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
+  background: white;
 
   &__container{
     width: 320px;
@@ -39,6 +42,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
 
   &__create-text{
@@ -52,6 +56,9 @@
     width: 99px;
     height: 44px;
     margin-right: 3px;
+    position: absolute;
+    z-index: 9999;
+    right: 0;
   }
 
 }

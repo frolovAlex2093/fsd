@@ -16,6 +16,7 @@
   line-height: 15px;
 
   border: none;
+  outline: none;
   border-radius: 22px;
 
   cursor: pointer;
@@ -36,10 +37,10 @@
 
 
   }
-  &:hover:before{
+  &:hover:after{
     background: $gradient-25;
   }
-  &:focus:before{
+  &:focus:after{
     background: $gradient-25;
   }
 }
