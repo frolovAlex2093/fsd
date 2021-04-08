@@ -1,6 +1,6 @@
-mixin text-field()
+mixin text-field({placeholder, type})
 
-    block content
 
-        form
-            input(class="forms" placeholder="Email" type='email')
+
+        form.form
+            input(class="forms" placeholder=placeholder type=type)

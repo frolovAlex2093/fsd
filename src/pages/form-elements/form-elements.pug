@@ -24,7 +24,7 @@ block content
 
     .form-elements
         .form-elements__box
-            +text-field
+            +text-field({placeholder: "Email", type: "email"})
         .form-elements__box
             +btn-colorful({text: "click me"})
             +btn-transparent({text: "войти"})
@@ -43,9 +43,11 @@ block content
                     {label: "Мужчина", name: "gender", checked: true},
                     {label: "Женщина", name: "gender", checked: false}]})
             +toggle-btn({items:[
-                    {label: "Получать спецпредложения", name: "tog1", checked: false}]})
+                    {label: "Получать спецпредложения", name: "tog1", checked: false},
+                    {label: "Получать спецпредложения", name: "tog1", checked: true}]})
         .form-elements__box
             +rate-button({check: [true, true, true, false, false]})
+            +rate-button({check: [true, true, true, true, true]})
         .form-elements__box
             +like-button({check: true, count: "2"})
             +like-button({check: false, count: "12"})

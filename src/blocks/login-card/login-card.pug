@@ -1,0 +1,19 @@
+include ../btn-long/btn-long
+include ../btn-transparent/btn-transparent
+include ../text-field/text-field
+
+mixin login-card()
+
+    .login-card
+        .login-card__container
+            .login-card__title= "Войти"
+            .login-card__text-field
+                +text-field({placeholder: "Email", type: "email"})
+            .login-card__text-field
+                +text-field({placeholder: "Пароль", type: "password"})
+            .login-card__login-btn
+                +btn-long({text: "войти"})
+            .login-card__create-accaunt
+                .login-card__create-text= "Нет аккаунта на Toxin?"
+                .login-card__create-btn
+                    +btn-transparent({text: "создать"})
