@@ -2,7 +2,7 @@
 
 
 .registration-card{
-  max-width: 380px;
+  width: 380px;
   height: 646px;
   display: flex;
   justify-content: center;
@@ -36,6 +36,7 @@
 
   &__radio{
     margin-bottom: 20px;
+    text-transform: none;
   }
 
   &__birthday{
@@ -49,6 +50,7 @@
 
   &__toggle{
     margin-bottom: 24px;
+    text-transform: none;
   }
 
   &__long-btn{

@@ -1,0 +1,16 @@
+extends ../main-ui-layout/main-ui-layout
+
+include ../../blocks/headers/headers
+include ../../blocks/login-card/login-card
+include ../../blocks/footer/footer
+
+block header
+    .header
+        +headers({links: ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"], type: false})
+block content
+    .log__card
+        +login-card
+
+block footer
+    .footer
+        +footer({type: true})

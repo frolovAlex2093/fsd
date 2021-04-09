@@ -37,11 +37,25 @@
   }
 
   &__buttons{
-    width: 303px;
-    height: 34px;
-    display: flex;
-    justify-content: space-between;
+    min-width: 303px;
+    position: relative;
     margin-top: 18px;
+
+    &-signIn{
+      position: absolute;
+      left: 0;
+      z-index: 9999;
+      width: 87px;
+      height: 34px;
+
+    }
+
+    &-signUp{
+      position: absolute;
+      right: 0;
+      width: 196px;
+      height: 34px;
+    }
   }
 
   &__name{

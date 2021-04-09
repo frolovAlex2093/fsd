@@ -2,6 +2,7 @@ extends ../main-ui-layout/main-ui-layout
 
 include ../../blocks/login-card/login-card
 include ../../blocks/registration-card/registration-card
+include ../../blocks/preview-card/preview-card
 
 
 
@@ -12,3 +13,5 @@ block content
             +login-card
         .cards-registration
             +registration-card
+        .cards-preview
+            +preview-card({price: "9 990₽", reviews: "145", rating: [true, true, true, true, true]})

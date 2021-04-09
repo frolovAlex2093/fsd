@@ -1,0 +1,140 @@
+@import "../../styles/colors";
+
+.preview-card{
+  width: 270px;
+  height: 257px;
+  background: white;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+
+
+
+  &__img{
+    height: 151px;
+    background-image: url("img/1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 4px 4px 0 0;
+
+  }
+
+  &__nav--right{
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+    font-family: "Material Icons", sans-serif;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    padding-right: 5px;
+    height:  151px;
+    width: 42px;
+    position: absolute;
+    writing-mode:tb-rl;
+    z-index: 999;
+    right: 0;
+    top: 0;
+    color: white;
+    border-radius: 4px 0 0 0;
+    cursor: pointer;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  &__nav--left{
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+    font-family: "Material Icons", sans-serif;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    padding-right: 5px;
+    height:  151px;
+    width: 42px;
+    position: absolute;
+    writing-mode:tb-rl;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    color: white;
+    border-radius: 4px 0 0 0;
+    cursor: pointer;
+    //transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+  &__nav--circle-box{
+    display: flex;
+    justify-content: space-between;
+    width: 41.25px;
+    height: 7.49px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    z-index: 999999;
+  }
+
+  &__nav--circle{
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 7.5px;
+    height: 7.49px;
+    box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+    cursor: pointer;
+
+    &-checked{
+      background: white;
+    }
+  }
+
+  &__content{
+    height: 107px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__container{
+    width: 233px;
+    height: 67px;
+  }
+
+  &__description{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $dark-shade-10;
+    padding-bottom: 10px;
+  }
+
+  &__number{
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark-shade-100;
+  }
+
+  &__price{
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark-shade-50;
+    display: flex;
+
+    &-day{
+      font-family: "Montserrat Regular", sans-serif;
+    }
+  }
+
+  &__rating{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__reviews-count{
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark-shade-50;
+    display: flex;
+
+    &--lite{
+      font-family: "Montserrat Regular", sans-serif;
+    }
+  }
+}

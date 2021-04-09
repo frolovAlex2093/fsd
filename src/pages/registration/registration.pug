@@ -1,0 +1,16 @@
+extends ../main-ui-layout/main-ui-layout
+
+include ../../blocks/headers/headers
+include ../../blocks/registration-card/registration-card
+include ../../blocks/footer/footer
+
+block header
+    .header
+        +headers({links: ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"], type: false})
+block content
+    .reg__card
+        +registration-card
+
+block footer
+    .footer
+        +footer({type: true})

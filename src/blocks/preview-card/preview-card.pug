@@ -1,0 +1,30 @@
+include ../rate-button/rate-button
+
+mixin preview-card({price, reviews, rating})
+
+    - var n = 0;
+
+    .preview-card
+        .preview-card__img
+            .preview-card__nav--right= "expand_more"
+            .preview-card__nav--left= "expand_more"
+            .preview-card__nav--circle-box
+                while n < 4
+                    if (n === 0)
+                        .preview-card__nav--circle-checked
+                    else
+                        .preview-card__nav--circle
+                    -n++
+        .preview-card__content
+            .preview-card__container
+                .preview-card__description
+                    .preview-card__number= "№ 888"
+                    .preview-card__price= price
+                        p.preview-card__price-day
+                            | &nbsp;в сутки
+                .preview-card__rating
+                    .preview-card__star
+                        +rate-button({check: rating})
+                    .preview-card__reviews-count= reviews
+                        p.preview-card__reviews-count--lite
+                            |&nbsp;Отзывов
