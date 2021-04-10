@@ -1,0 +1,8 @@
+mixin slider({title="Range", footerText, min, max, type, from, to})
+    .slider
+        .slider__header
+            .slider__title= title
+            .slider__min-max
+        input.js-range-slider(data-min=min data-max=max data-type=type data-from=from data-to=to)
+        if footerText
+            .slider__footer= footerText

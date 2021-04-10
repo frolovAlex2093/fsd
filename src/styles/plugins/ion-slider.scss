@@ -1,0 +1,36 @@
+@import "~ion-rangeslider/css/ion.rangeSlider.css";
+@import "../colors";
+
+.irs {
+
+  &--flat {
+
+    .irs-min,
+    .irs-max {
+      visibility: hidden;
+    }
+
+    .irs-bar {
+      height: 6px;
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+      border-radius: 3px;
+    }
+
+    .irs-line {
+      height: 6px;
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      border-radius: 3px;
+      background: white;
+    }
+
+    .irs-handle > i:first-child {
+      width: 16px;
+      height: 16px;
+      top: -2px;
+      left: -1px;
+      border-radius: 50%;
+      border: 2px solid white;
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    }
+  }
+}

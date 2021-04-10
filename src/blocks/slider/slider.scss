@@ -1,0 +1,30 @@
+@import "../../styles/colors";
+
+.slider {
+  font-family: Montserrat, OpenSans, sans-serif;
+  text-transform: uppercase;
+  font-size: .75rem;
+  line-height: .625rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: bold;
+    color: $dark-shade-100;
+  }
+
+  &__min-max {
+    text-align: right;
+    color: $dark-shade-50;
+  }
+
+  &__footer {
+    text-transform: none;
+    line-height: .875rem;
+    color: $dark-shade-50;
+    margin-top: 6px;
+  }
+}
