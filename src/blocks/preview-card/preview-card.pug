@@ -1,20 +1,12 @@
 include ../rate-button/rate-button
+include ../room-img/room-img
 
-mixin preview-card({price, reviews, rating})
+mixin preview-card({price, reviews, rating  })
 
-    - var n = 0;
+
 
     .preview-card
-        .preview-card__img
-            .preview-card__nav--right= "expand_more"
-            .preview-card__nav--left= "expand_more"
-            .preview-card__nav--circle-box
-                while n < 4
-                    if (n === 0)
-                        .preview-card__nav--circle.preview-card__nav--circle-checked
-                    else
-                        .preview-card__nav--circle
-                    -n++
+        +room-img({img: "1", nav: true, circles:[true, false, false, false]})
         .preview-card__content
             .preview-card__container
                 .preview-card__description

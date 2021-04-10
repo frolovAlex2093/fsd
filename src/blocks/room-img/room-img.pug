@@ -1,0 +1,16 @@
+mixin room-img({img, nav, circles})
+    -var i = 0;
+
+    .room-img
+        .room-img__img
+            img(src=require(`blocks/room-img/img/room-${img}.png`).default, alt="apartment photo")
+            if(nav)
+                .room-img__nav.room-img__nav--right= "expand_more"
+                .room-img__nav.room-img__nav--left= "expand_more"
+            .room-img__circles
+                while (i<4)
+                    if(circles[i])
+                        .room-img__circle.room-img__circle--white
+                    else
+                        .room-img__circle
+                    -i++;
