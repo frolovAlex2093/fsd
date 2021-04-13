@@ -1,22 +1,25 @@
 include ../rate-button/rate-button
 include ../room-img/room-img
+include ../price/price
 
-mixin preview-card({price, reviews, rating  })
+mixin preview-card({items})
 
 
 
     .preview-card
-        +room-img({img: "1", nav: true, circles:[true, false, false, false]})
-        .preview-card__content
-            .preview-card__container
-                .preview-card__description
-                    .preview-card__number= "№ 888"
-                    .preview-card__price= price
-                        p.preview-card__price-day
-                            | &nbsp;в сутки
-                .preview-card__rating
-                    .preview-card__star
-                        +rate-button({check: rating})
-                    .preview-card__reviews-count= reviews
-                        p.preview-card__reviews-count--lite
-                            |&nbsp;Отзывов
+        each item in items
+            +room-img({img: item.img, nav: item.nav, circles: item.circles})
+            .preview-card__content
+                .preview-card__container
+                    +price({price: item.price, text: item.text, number: item.number})
+                    .preview-card__rating
+                        .preview-card__star
+                            +rate-button({check: item.rating})
+                        .preview-card__reviews-count= item.reviews
+                            p.preview-card__reviews-count--lite
+                                if(reviews % 10 === 0||5||6||7||8||9)
+                                    |&nbsp;Отзывов
+                                else if(reviews % 10 === 1)
+                                    |&nbsp;Отзыв
+                                else if(reviews % 10 === 2||3||4)
+                                    |&nbsp;Отзыва

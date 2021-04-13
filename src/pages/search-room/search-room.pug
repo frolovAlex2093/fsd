@@ -1,0 +1,155 @@
+extends ../main-ui-layout/main-ui-layout
+
+include ../../blocks/headers/headers
+include ../../blocks/footer/footer
+include ../../blocks/slider/slider
+include ../../blocks/checkbox/checkbox
+include ../../blocks/expander/expander
+include ../../blocks/preview-card/preview-card
+include ../../blocks/pagination/pagination
+
+
+block header
+    .header
+        +headers({links: ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"], type: false})
+block content
+    .search-room
+        .container
+            aside.aside__container
+                .slider__container
+                    +slider({
+                        title: "диапазон цены",
+                        type: "double",
+                        min: "500",
+                        max: "15000",
+                        from: "5000",
+                        to: "10000",
+                        footerText: "Стоимость за сутки пребывания в номере"
+                    })
+                .checkbox__container
+                    .container__text= "правила дома"
+                    +checkbox({
+                        items: [
+                            {label: "Можно курить", checked: false},
+                            {label: "Можно с питомцами", checked: true},
+                            {label: "Можно пригласить гостей (до 10 человек)", checked: true},
+                        ]
+                    })
+                .checkbox__container
+                    .container__text= "доступность"
+                    +checkbox({
+                        items: [
+                            {
+                                label: "Широкий коридор",
+                                description: "Ширина коридоров в номере не менее 91 см.",
+                                checked: false
+                            },
+                            {
+                                label: "Помощник для инвалидов",
+                                description: "На 1 этаже вас встретит специалист  и проводит до номера.",
+                                checked: false
+                            }
+                        ]
+                    })
+                .expander__container
+                    +expander({
+                        title: "дополнительные удобства",
+                        list: [
+                            {text: "Завтрак", checked: false},
+                            {text: "Письменный стол", checked: true},
+                            {text: "Стул для кормления", checked: true},
+                            {text: "Кроватка", checked: true},
+                            {text: "Телевизор", checked: false},
+                            {text: "Шампунь", checked: false}],
+                        hide: true
+                    })
+            .room-search__container
+                .container__text.container__text-big= "Номера, которые мы для вас подобрали"
+                +preview-card({
+                    items: [{
+                        price: "9 990₽", reviews: "145", rating: [true, true, true, true, true],
+                        img: "1", nav: true, circles: [true, false, false, false], text: "люкс", number: "№ 888"
+                    }]
+                })
+                +preview-card({
+                    items: [{
+                        price: "9 990₽", reviews: "65", rating: [true, true, true, true, false],
+                        img: "2", nav: false, circles: [true, false, false, false], number: "№ 840"
+                    }]
+                })
+                +preview-card({
+                    items: [{
+                        price: "8 500₽ ", reviews: "35", rating: [true, true, true, false, false],
+                        img: "3", nav: false, circles: [true, false, false, false], text: "люкс", number: "№ 980"
+                    }]
+                })
+                +preview-card({
+                    items: [{
+                        price: "7 300₽", reviews: "19", rating: [true, true, true, true, true],
+                        img: "4", nav: false, circles: [true, false, false, false], number: "№ 856"
+                    }]
+                })
+                +preview-card({
+                    items: [{
+                        price: "6 000₽", reviews: "44", rating: [true, true, true, true, false],
+                        img: "5", nav: false, circles: [true, false, false, false], text: "люкс", number: "№ 740"
+                    }]
+                })
+                +preview-card({
+                    items: [{
+                        price: "5 800₽", reviews: "145", rating: [true, true, true, false, false],
+                        img: "6", nav: false, circles: [true, false, false, false], number: "№ 982"
+                    }]
+                })
+                +preview-card({
+                    items: [{
+                        price: "5 500₽", reviews: "45", rating: [true, true, true, true, true],
+                        img: "7", nav: false, circles: [true, false, false, false], number: "№ 678"
+                    }]
+                })
+                +preview-card({
+                    items: [{
+                        price: "5 300₽", reviews: "39", rating: [true, true, true, true, false],
+                        img: "8", nav: false, circles: [true, false, false, false], number: "№ 450"
+                    }]
+                })
+                +preview-card({
+                    items: [{
+                        price: "5 000₽", reviews: "77", rating: [true, true, true, false, false],
+                        img: "9", nav: false, circles: [true, false, false, false], number: "№ 350"
+                    }]
+                })
+                +preview-card({
+                    items: [{
+                        price: "5 000₽", reviews: "25", rating: [true, true, true, true, true],
+                        img: "10", nav: false, circles: [true, false, false, false], number: "№ 666"
+                    }]
+                })
+                +preview-card({
+                    items: [{
+                        price: "5 000₽", reviews: "15", rating: [true, true, true, false, false],
+                        img: "11", nav: false, circles: [true, false, false, false], number: "№ 444"
+                    }]
+                })
+                +preview-card({
+                    items: [{
+                        price: "5 000₽", reviews: "55", rating: [true, true, true, true, true],
+                        img: "12", nav: false, circles: [true, false, false, false], number: "№ 352"
+                    }]
+                })
+
+                .pagination__container
+                    +pagination({
+                        pages: [
+                            {number: "1", checked: true},
+                            {number: "2", checked: false},
+                            {number: "3", checked: false},
+                            {number: "...", checked: false},
+                            {number: "15", checked: false},
+                            {number: "arrow_forward", checked: false},
+                        ]
+                    })
+
+block footer
+    .footer
+        +footer({type: true})

@@ -1,0 +1,9 @@
+mixin price({price, text, number})
+
+    .price
+        .price__room-number= number
+            if(text)
+                .price__text= text
+        .price__price= price
+            p.price__price-day
+                |&nbsp;в сутки
