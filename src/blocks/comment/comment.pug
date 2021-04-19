@@ -1,12 +1,12 @@
 include ../like-button/like-button
 include ../prof/prof
 
-mixin comment({text})
+mixin comment({text, name, date, check, count, img})
 
     .comment
         .comment__prof
-            +prof({name: "Мурад Сарафанов", date: "5 дней назад"})
+            +prof({name: name, date: date, img: img})
         .comment__content
             .comment__reiting
-                +like-button({check: false, count: 12})
+                +like-button({check: check, count: count})
             .comment__text= text

@@ -1,7 +1,8 @@
-mixin prof({name, date})
+mixin prof({name, date, img})
 
     .prof__card
         .prof__photo
+            img(src=require(`blocks/prof/img/${img}.png`).default, class="prof__image", alt="prof photo")
         .prof__text
             .prof__name= name
             .prof__date= date

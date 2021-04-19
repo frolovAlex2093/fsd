@@ -7,6 +7,7 @@ include ../../blocks/donut/donut
 include ../../blocks/bullet/bullet
 include ../../blocks/room-gallery/room-gallery
 include ../../blocks/comment/comment
+include ../../blocks/bullet-list/bullet-list
 
 
 
@@ -19,10 +20,12 @@ block content
         .room-details__container
             .room-details__info
                 .room-details__advantages
+                    .room-details__titles= "Сведения о номере"
                     +advantages({icon: "insert_emoticon", title: "Комфорт", text: "Шумопоглощающие стены", border: true})
                     +advantages({icon: "location_city", title: "Удобство", text: "Окно в каждой из спален", border: true})
                     +advantages({icon: "whatshot", title: "Уют", text: "Номер оснащён камином", border: false})
                 .room-details__donut
+                    .room-details__titles= "Впечатления от номера"
                     +donut([
                         {"value": 65, "color": "#BC9CFF"},
                         {"value": 65, "color": "#6FCF97"},
@@ -34,10 +37,27 @@ block content
                         {text: "Удовлетворительно", color: "pink"},
                         {text: "Разачарован", color: "black"}
                     ])
-                +comment({
-                    text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, " +
-                        "действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей. "
-                })
+                .room-details__comments
+                    .room-details__titles= "Отзывы посетителей номера"
+                        .room-details__titles-lite= "2 отзыва"
+                    +comment({
+                        text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, " +
+                            "действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей. ",
+                        name: "Мурад Сарафанов", date: "5 дней назад", check: false, count: 12, img: "man"
+                    })
+                    +comment({
+                        text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день " +
+                            "новое блюдо и десерт как комплимент",
+                        name: "Патрисия Стёклышкова", date: "Неделю назад", check: true, count: 2, img: "woman"
+                    })
+                .room-details__bullet-list
+                    .room-details__titles= "Правила"
+                    +bullet-list({text: "Нельзя с питомцами"})
+                    +bullet-list({text: "Без вечеринок и мероприятий"})
+                    +bullet-list({text: "Время прибытия — после 13:00, а выезд до 12:00"})
+                .room-details__detail
+                    .room-details__titles= "Отмена"
+                    .room-details__text= "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."
         .room-details__registration
 
 block footer
