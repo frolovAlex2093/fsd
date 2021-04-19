@@ -1,8 +1,9 @@
-mixin advantages({icon, title, text})
+mixin advantages({icon, title, text, border})
 
     .advantage
         .advantage__icon= icon
         .advantage__content
             .advantage__title= title
             .advantage__text= text
-        .advantage__br
+        if(border)
+            .advantage__br

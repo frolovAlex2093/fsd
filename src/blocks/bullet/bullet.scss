@@ -1,0 +1,53 @@
+@import '../../styles/colors.scss';
+
+.bullet {
+  list-style: none inside none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-end: 0;
+  margin-bottom: 10px;
+  margin-left: 10px;
+
+  &__element {
+    position: relative;
+    padding-left: 19px;
+    padding-bottom: 14px;
+    font-family: "Montserrat Regular", sans-serif;
+    color: $dark-shade-75;
+    font-size: 14px;
+    line-height: 24px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: -1px;
+      width: 10px;
+      height: 10px;
+      background-color: $dark-shade-25;
+      border-radius: 50%;
+    }
+
+    &_compacted {
+      padding-bottom: 3px;
+      padding-left: 14px;
+    }
+
+    &_yellow:before {
+      background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+    }
+
+    &_blue::before {
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    }
+
+    &_pink::before {
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    }
+
+    &_black::before {
+      background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+    }
+  }
+}

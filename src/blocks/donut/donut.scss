@@ -1,0 +1,31 @@
+@import '../../styles/colors.scss';
+
+.donut {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  color: $purple;
+  cursor: default;
+  text-align: center;
+
+
+
+  &__text {
+    position: absolute;
+    top: 50px;
+    left: 44px;
+    font-family:"Montserrat Bold", sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $purple;
+  }
+
+  &__main-value {
+    font-family: Quicksand, OpenSans, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0;
+  }
+}

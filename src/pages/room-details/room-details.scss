@@ -1,0 +1,35 @@
+.room-details{
+  display: flex;
+  justify-content: center;
+  max-width: 1440px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  //flex-direction: column;
+
+  &__advantages {
+
+  }
+
+  &__container{
+    display: flex;
+    flex-direction: row;
+    max-width: 708px;
+  }
+
+  &__info{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__donut{
+    height: 150px;
+    display: flex;
+    align-items: flex-end
+  }
+
+  &__registration{
+    width: 380px;
+    height: 511px;
+    color:gray;
+  }
+}

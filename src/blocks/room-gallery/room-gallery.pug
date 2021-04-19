@@ -1,0 +1,8 @@
+mixin room-gallery({img})
+
+    .room-gallery
+        .room-gallery__main
+            img(src=require(`blocks/room-gallery/img/${img[0]}.png`).default, class="room-gallery__image", alt="apartment photo")
+        .room-gallery__secondary
+            img(src=require(`blocks/room-gallery/img/${img[1]}.png`).default, class="room-gallery__image", alt="apartment photo")
+            img(src=require(`blocks/room-gallery/img/${img[2]}.png`).default, class="room-gallery__image", alt="apartment photo")

@@ -1,0 +1,45 @@
+extends ../main-ui-layout/main-ui-layout
+
+include ../../blocks/headers/headers
+include ../../blocks/footer/footer
+include ../../blocks/advantages/advantages
+include ../../blocks/donut/donut
+include ../../blocks/bullet/bullet
+include ../../blocks/room-gallery/room-gallery
+include ../../blocks/comment/comment
+
+
+
+block header
+    .header
+        +headers({links: ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"], type: false})
+block content
+    .room-details
+        +room-gallery({img: [1, 2, 3]})
+        .room-details__container
+            .room-details__info
+                .room-details__advantages
+                    +advantages({icon: "insert_emoticon", title: "Комфорт", text: "Шумопоглощающие стены", border: true})
+                    +advantages({icon: "location_city", title: "Удобство", text: "Окно в каждой из спален", border: true})
+                    +advantages({icon: "whatshot", title: "Уют", text: "Номер оснащён камином", border: false})
+                .room-details__donut
+                    +donut([
+                        {"value": 65, "color": "#BC9CFF"},
+                        {"value": 65, "color": "#6FCF97"},
+                        {"value": 130, "color": "#FFE39C"}
+                    ])
+                    +bullet([
+                        {text: "Великолепно", color: "yellow"},
+                        {text: "Хорошо", color: "blue"},
+                        {text: "Удовлетворительно", color: "pink"},
+                        {text: "Разачарован", color: "black"}
+                    ])
+                +comment({
+                    text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, " +
+                        "действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей. "
+                })
+        .room-details__registration
+
+block footer
+    .footer
+        +footer({type: true})

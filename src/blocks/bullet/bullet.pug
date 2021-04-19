@@ -1,0 +1,11 @@
+mixin bullet(listItems)
+  ul.bullet
+    each item in listItems
+      - let classes = ["bullet__element"]
+      if item.color
+        - classes.push("bullet__element_compacted")
+        - classes.push("bullet__element_" + item.color)
+        li(class=classes)= item.text
+      else
+        li.bullet__element
+          span.bullet__item= item.text
