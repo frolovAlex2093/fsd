@@ -7,7 +7,7 @@ include ../../blocks/checkbox/checkbox
 include ../../blocks/expander/expander
 include ../../blocks/preview-card/preview-card
 include ../../blocks/pagination/pagination
-
+include ../../blocks/dropdown-field/dropdown-field
 
 block header
     .header
@@ -16,6 +16,9 @@ block content
     .search-room
         .container
             aside.aside__container
+                .range__container
+                    +dropdown-field({title: "даты пребывания в отеле", value: "19 авг - 23 авг"})
+
                 .slider__container
                     +slider({
                         title: "диапазон цены",

@@ -21,9 +21,12 @@
   }
 
   &__rating{
+    margin-top: 10px;
     padding-top: 10px;
     display: flex;
     justify-content: space-between;
+    border-top: 1px solid $dark-shade-10;
+
   }
 
   &__reviews-count{

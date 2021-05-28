@@ -1,5 +1,6 @@
 include ../main-logo/main-logo
 include ../socials/socials
+include ../subscription/subscription
 
 mixin footer({type})
 
@@ -30,6 +31,8 @@ mixin footer({type})
 
                 .footer__nav= "Подписка"
                     .footer__text= "Получайте специальные предложения и новости сервиса"
+                     .footer__subscription
+                        +subscription({ placeholder: "Email" })
             .footer__br
 
             .footer__copyright

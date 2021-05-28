@@ -1,0 +1,10 @@
+@import '../../styles/colors.scss';
+
+.range-dates {
+  display: flex;
+  justify-content: space-between;
+
+  &__input {
+    width: 150px;
+  }
+}

@@ -4,6 +4,7 @@ include ../../blocks/login-card/login-card
 include ../../blocks/registration-card/registration-card
 include ../../blocks/preview-card/preview-card
 include ../../blocks/datepicker/datepicker
+include ../../blocks/booking-card/booking-card
 
 block content
 
@@ -17,4 +18,7 @@ block content
                     img: "1", nav: true, circles:[true, false, false, false], text: "люкс", number: "№ 888"}]})
             +preview-card({items:[{price: "9 990₽", reviews: "65", rating: [true, true, true, true, false],
                     img: "2", nav: false, circles:[true, false, false, false], number: "№ 840"}]})
+
+            +booking-card({price: "9 990₽", text: "люкс", number: "№ 888"})
+
             +datepicker

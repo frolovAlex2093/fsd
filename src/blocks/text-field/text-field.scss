@@ -1,7 +1,7 @@
 @import "../../styles/colors";
 
 .forms{
-  width: 320px;
+  width: 100%;
   height: 44px;
   outline: none;
   border: 1px solid $dark-shade-25;
@@ -9,20 +9,16 @@
 
   &:hover{
     border: $dark-shade-50 1px solid;
-
-
   }
 
   &:focus{
     border: $dark-shade-50 1px solid;
-
-
   }
 
   &:hover::-webkit-input-placeholder { color: $dark-shade-75; }
 
   &::placeholder{
-
+    padding-left: 15px;
     font-family: "Montserrat Regular", sans-serif;
     font-size: 14px;
     line-height: 18px;

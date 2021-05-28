@@ -1,0 +1,7 @@
+mixin dropdown-field({ title, placeholder, value })
+  .dropdown-field
+    if title
+      .dropdown-field__title= title
+    label.dropdown-field__icon-wrapper
+      input.dropdown-field__input(placeholder=placeholder value=value)
+

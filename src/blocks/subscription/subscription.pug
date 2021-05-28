@@ -1,0 +1,7 @@
+include ../text-field/text-field
+
+mixin subscription({placeholder, link="/mock-address"})
+  .subscription
+    form.subscription__form(action=link, method="get")
+      +text-field({type: "email", placeholder: placeholder})
+      button.subscription__button arrow_forward
