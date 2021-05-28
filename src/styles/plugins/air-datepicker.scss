@@ -1,0 +1,124 @@
+@import '~air-datepicker/src/sass/datepicker.scss';
+@import '~air-datepicker/src/sass/navigation.scss';
+@import '~air-datepicker/src/sass/cell.scss';
+@import "../colors";
+
+.datepicker {
+  font-family: "Montserrat Regular", OpenSans, sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 10px 20px 16px;
+  width: 280px;
+
+  &--content {
+    padding: 0;
+  }
+
+  &--cell {
+    width: 40px;
+    height: 40px;
+    color: $dark-shade-50;
+
+    &.-current- {
+      background-image: $light-gradient;
+      border-radius: 50%;
+      color: $white;
+      font-family: "Montserrat Bold", OpenSans, sans-serif;
+
+
+      &.-focus- {
+        background-image: $light-gradient;
+        color: $white;
+      }
+
+      &.-in-range- {
+        color: $white;
+      }
+    }
+
+    &.-focus- {
+      background: none;
+    }
+
+    &.-selected- {
+      border-radius: 50%;
+      background-image: $gradient;
+      font-family: "Montserrat Bold", OpenSans, sans-serif;
+
+      &.-focus- {
+        background-image: $gradient;
+      }
+    }
+
+    &.-in-range- {
+      background: $gradient-25;
+      color: $dark-shade-50;
+    }
+
+    &.-range-from- {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 40px;
+        background-image: $gradient-25;
+        right: 0;
+      }
+    }
+
+    &.-range-to- {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 40px;
+        background-image: $gradient-25;
+        left: 0;
+      }
+    }
+  }
+
+  &--day-name {
+    font-family: "Montserrat Bold", OpenSans, sans-serif;
+    color: $purple;
+    width: 40px;
+    height: 40px;
+    text-transform: none;
+  }
+
+  &--nav {
+    border-bottom: none;
+    padding: 6px 0 14px;
+    font-size: 1.5rem;
+  }
+
+  &--nav-action {
+    width: auto;
+    //height: 25px;
+    color: $purple;
+  }
+
+  &--pointer {
+    display: none;
+  }
+
+  &--nav-title,
+  &--nav-title i {
+    color: $dark-shade-100;
+    font-size: 1.19rem;
+    font-family: Quicksand, OpenSans, sans-serif;
+    font-weight: bold;
+  }
+}
+
+
+.material-icons{
+  font-family: 'Material Icons', sans-serif;
+  font-size: 24px;
+  line-height: 25px;
+  font-style: normal;
+}

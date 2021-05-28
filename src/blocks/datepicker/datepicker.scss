@@ -1,0 +1,23 @@
+@import "../../styles/colors";
+
+.calendar {
+  font-family: Montserrat, OpenSans, sans-serif;
+
+  &__footer {
+    padding-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__clear-button {
+    cursor: pointer;
+    color: $dark-shade-50;
+  }
+
+  &__apply-button {
+    cursor: pointer;
+    color: $purple;
+  }
+}
