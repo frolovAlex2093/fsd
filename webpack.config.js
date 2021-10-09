@@ -7,6 +7,8 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 const fs = require('fs');
 const webpack = require('webpack');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+
 
 
 const isDev = process.env.NODE_ENV === "development"
@@ -66,6 +68,7 @@ module.exports = {
         port: 4200
     },
     plugins: [
+        //new FaviconsWebpackPlugin('assets/img/favicon.svg'),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: filename("css")

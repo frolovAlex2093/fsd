@@ -1,4 +1,3 @@
-/* global $ */
 
 class Expander {
   constructor() {

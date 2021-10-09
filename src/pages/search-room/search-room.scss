@@ -50,6 +50,10 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+    
+    @media (max-width: 1064px) {
+      justify-content: space-around;
+    }
 }
 
 .pagination__container{

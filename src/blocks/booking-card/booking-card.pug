@@ -1,0 +1,9 @@
+include ../price/price
+include ../range-dates/range-dates
+
+mixin booking-card ({price, text, number})
+
+    .booking-card
+        .booking-card__container
+            +price({price: price, text: text, number: number})
+            +range-dates({inLabel: "прибытие", outLabel: "выезд"})

@@ -17,6 +17,7 @@ include ../../blocks/checkbox/checkbox
 include ../../blocks/expander/expander
 include ../../blocks/pagination/pagination
 include ../../blocks/slider/slider
+include ../../blocks/dropdown/dropdown
 
 block content
 
@@ -24,6 +25,7 @@ block content
         +logo
 
     .form-elements
+        +dropdown()
         .form-elements__box
             +text-field({placeholder: "Email", type: "email"})
         .form-elements__box

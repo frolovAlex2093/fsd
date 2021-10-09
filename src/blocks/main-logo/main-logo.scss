@@ -3,4 +3,8 @@
   background-repeat: no-repeat;
   width: 105.69px;
   height: 40px;
+  
+  @media (max-width: 873px) {
+    background-image: url("img/main-logo-little.svg");
+  }
 }

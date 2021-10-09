@@ -6,6 +6,7 @@
   outline: none;
   border: 1px solid $dark-shade-25;
   border-radius: 4px;
+  padding-left: 15px;
 
   &:hover{
     border: $dark-shade-50 1px solid;
@@ -18,7 +19,7 @@
   &:hover::-webkit-input-placeholder { color: $dark-shade-75; }
 
   &::placeholder{
-    padding-left: 15px;
+    //padding-left: 15px;
     font-family: "Montserrat Regular", sans-serif;
     font-size: 14px;
     line-height: 18px;
